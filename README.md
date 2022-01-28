@@ -6,7 +6,7 @@ This AMP Stack contains:
 3. PHPMyAdmin
 
 # Getting Started
-This project requires a *Docker* installation. If you are using a Mac, you can install Docker by following the instructions on [this page](https://docs.docker.com/docker-for-mac/install/). If you are using a Linux machine, you can install Docker by following the instructions on [this page](https://docs.docker.com/docker-for-linux/install/). If you are using a Windows machine, you can install Docker by following the instructions on [this page](https://docs.docker.com/docker-for-windows/install/).
+This project requires a *Docker* installation. If you are using a Mac, you can install Docker by following the instructions on [this page](https://docs.docker.com/docker-for-mac/install/). If you are using a Linux machine, you can install Docker by following the instructions on [this page](https://docs.docker.com/engine/install/). If you are using a Windows machine, you can install Docker by following the instructions on [this page](https://docs.docker.com/docker-for-windows/install/).
 
 ## Starting the container
 First, clone the repository into your local machine. Point your terminal to this directory and run the following command:

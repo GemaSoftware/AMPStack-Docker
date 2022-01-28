@@ -1,0 +1,43 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+    - db
+    volumes:
+    - ./web:/var/www/html
+    networks:
+    - amp-network
+    ports:
+    - 8080:80
+  db:
+    image: mysql:8.0
+    restart: always
+    networks:
+    - amp-network
+    environment:
+      MYSQL_ROOT_PASSWORD: changeme
+      MYSQL_DATAMASE: mainDB
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    volumes:
+    - persistent:/var/lib/mysql
+    ports:
+    - "8123:3306"
+  phpadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+    - db
+    - web
+    networks:
+    - amp-network
+    ports:
+    - 8081:80
+    environment:
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_ROOT_PASSWORD: changeme
+volumes:
+  persistent:

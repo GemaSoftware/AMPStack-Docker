@@ -23,7 +23,7 @@ services:
     volumes:
     - persistent:/var/lib/mysql
     ports:
-    - "8123:3306"
+    - "8306:3306"
   phpadmin:
     image: phpmyadmin/phpmyadmin
     depends_on:

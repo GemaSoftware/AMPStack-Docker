@@ -9,19 +9,17 @@ services:
     volumes:
     - ./web:/var/www/html
     networks:
-    - amp-network
+    - default
     ports:
     - 8080:80
   db:
     image: mysql:8.0
     restart: always
     networks:
-    - amp-network
+    - default
     environment:
       MYSQL_ROOT_PASSWORD: changeme
-      MYSQL_DATAMASE: mainDB
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: admin
+      MYSQL_DATABASE: mainDB
     volumes:
     - persistent:/var/lib/mysql
     ports:
@@ -32,12 +30,11 @@ services:
     - db
     - web
     networks:
-    - amp-network
+    - default
     ports:
     - 8081:80
     environment:
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: admin
-      MYSQL_ROOT_PASSWORD: changeme
+      MYSQL_USER: root
+      MYSQL_PASSWORD: changeme
 volumes:
   persistent:

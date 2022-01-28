@@ -2,3 +2,7 @@
 This repository will contain the necessary configurations to spin up a docker containter that follows the AMP Stack ideology. Apache, MySQL, and PHP. Contains PHPMyAdmin 
 
 # Getting Started
+This project requires a *docker* installation. 
+```
+docker-compose up -d
+```

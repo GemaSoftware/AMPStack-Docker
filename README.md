@@ -26,7 +26,7 @@ To access the MySQL Server, port 8306 is assigned to the container so you can ac
 >**Please change the password or opt to disable root and create a new user for the MySQL server.**
 ```
 Host: localhost
-Port: 8306
+Port: 8123
 Username: root
 Password: changeme
 ```
